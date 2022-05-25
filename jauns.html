@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Gaidot Dzimšanas dienu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            function dienas1(){
+                var men = document.getElementById("menesis").value;
+                var diena = document.getElementById("diena").value;
+                var gads = document.getElementById("gads").value;
+                var day1 = new Date(men+"/"+diena+ "/"+gads);
+                var day2 = new Date();
+                var starpiba1 = Math.round((day1-day2)/(1000*3600*24));
+               
+                
+               
+                   document.getElementById("dienas").value=starpiba1;
+      
+            }
+        </script>
+        <div><h1>Gaidot Dzimšannas dienu</h1>
+            <hr>
+        </div>
+        <form>
+            <p>Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena.</p>
+            <p>Gads<input name = "Gads" id = "gads" type = "text"></p>
+            <p>Mēnesis<input name = "Menesis" id = "menesis" type = "text"></p>
+            <p>Diena<input name = "Diena" id = "diena" type = "text"></p>
+            <p><input onclick="dienas1()" id = "poga" name = "poga" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" type="button"></p>
+            <p>Līdz svētkiem atlikušas<input name = "dienas" id = "dienas" type = "text"  > dienas</p>
+        </form>
+        
+    </body>
+</html>
